@@ -15,11 +15,11 @@
     <body>
         <header>
             <h1>Angel Zambrano</h1>
-                <img 
+            <p>Estudiante | anzagood@espol.edu.ec | 0999999999</p>
+            <img 
                 src="imagenes/yoESPOL.png" 
                 alt="Foto de perfil de Angel Zambrano" 
                 id = "photo">
-            <p>Estudiante | anzagood@espol.edu.ec | 0999999999</p>
             </header>
         <nav>
         <ul>
@@ -30,16 +30,6 @@
             <li><a href="#proyectos">Proyectos</a></li> 
         </ul>
         </nav>
-
-        <section id = "dia-normal">
-            <h2 class = "subtitle">Dia normal en mi vida de quinto semestre</h2>
-            <ol>
-                <li>Leo Sistemas operativos</li>
-                <li>Desayuno me preparo para ir a la universidad</li>
-                <li>Recibo clases en la Escuela Superior Politecnica del Litoral</li>
-                <li>Hago deberes, controles de lectura o me preparo para las clases del dia siguiente</li>
-            </ol> 
-        </section>
 
         <main>
 
@@ -55,7 +45,8 @@
                         height="450" 
                         style="border:0;"
                         allowfullscreen="" 
-                        loading="lazy" 
+                        loading="lazy"
+                        id="mapa-facultad" 
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
 
@@ -63,6 +54,7 @@
                     <ul>
                         <li>Java</li>
                         <li>Python</li>
+                        <li>Kotlin</li>
                         <li>JavaScript</li>
                     </ul>
             </section>
@@ -80,23 +72,68 @@
 
             <section id="habilidades">
                 <h2 class = "subtitle">Habilidades</h2>
-                <p>Lista de tus habilidades técnicas y blandas.</p>
+                <ul>
+                    <li>
+                        <strong>Trabajo en Equipo:</strong> Gran capacidad para colaborar en entornos de desarrollo ágiles, comunicarme eficazmente con mis compañeros y contribuir a un objetivo común.
+                    </li>
+                    <li>
+                        <strong>Resolución de Problemas:</strong> Habilidad para analizar situaciones complejas, identificar la raíz de un problema y proponer soluciones lógicas y eficientes.
+                    </li>
+                    <li>
+                        <strong>Java:</strong> Sólidos conocimientos en programación orientada a objetos, desarrollo de aplicaciones y principios de software robusto.
+                    </li>
+                    <li>
+                        <strong>Python para Análisis de Datos:</strong> Experiencia en el uso de librerías como Pandas, NumPy y Matplotlib para la manipulación, análisis y visualización de datos.
+                    </li>
+                </ul>
             </section>
 
             <section id="proyectos">
-                <h2 class = "subtitle">Proyectos</h2>
-                <p>Descripción de proyectos relevantes.</p>
+                <h2 class="subtitle">Proyectos</h2>
+
+                <article class="proyecto">
+                <h3><a href="https://github.com/Sambek99/BaseDeDatos" target="_blank" rel="noopener noreferrer">Base de datos de una urbanización para control de entrada</a></h3>
+                <p>
+                    Este proyecto utilizó <strong>MySQL</strong> con lenguaje <strong>SQL</strong> y se crearon PROCEDURES con ayuda de <strong>Python</strong> y las siguientes librerías: "pymysql, python-dotenv, tabulate, colorama, qrcode, pillow". El objetivo principal del mismo es tener registros de las personas que entran y salen con sus cédulas y, si entran en vehículo, sus placas vehiculares, además de gestionar también las entradas automatizadas para los residentes al día con sus alícuotas.
+                </p>
+                </article>
+
+                <article class="proyecto">
+                <h3><a href="https://github.com/anzagood1/Proyecto-Segundo-Parcial-POO" target="_blank" rel="noopener noreferrer">App de cine</a></h3>
+                <p>
+                    Esta app fue principalmente para demostrar conocimientos de Programación Orientada a Objetos como polimorfismo, herencia y encapsulamiento. Se hizo uso de <strong>Java</strong> y cuenta con interfaz gráfica diseñada para dispositivos Android desde <strong>Android Studio</strong>.
+                </p>
+                </article>
+
+                <article class="proyecto">
+                <h3><a href="https://github.com/anzagood1/POO4_1P_ZAMBRANO_LLAMUCA_VILLACIS" target="_blank" rel="noopener noreferrer">Gestionador de espacios en la ESPOL</a></h3>
+                <p>
+                    Este proyecto demuestra conocimientos de Programación Orientada a Objetos. Es una app de consola que cuenta con tres perfiles: Administrador, Estudiante y Profesor, para reservar espacios como aulas, auditorios, etc.
+                </p>
+                </article>
+
             </section>
+            <section id = "dia-normal">
+            <h2 class = "subtitle">Dia normal en mi vida de quinto semestre</h2>
+            <ol>
+                <li>Leo Sistemas operativos</li>
+                <li>Desayuno me preparo para ir a la universidad</li>
+                <li>Recibo clases en la Escuela Superior Politecnica del Litoral</li>
+                <li>Hago deberes, controles de lectura o me preparo para las clases del dia siguiente</li>
+            </ol> 
+        </section>
+
 
             <section id= "video">
-                <h2 class = "subtitle">Video de FESD</h2>
-                
+                <h2 class = "subtitle">Voces con ciencia</h2>
+                <p> Este video demuestra mis habilidades y las de mi grupo como oradores en un auditorio en la Facultad de Ingenieria Electrica y de Computacion de la ESPOL. Hablamos sobre autos autonomos desde una perspectiva a favor.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hiaEPJGjZvg?si=DcEKomLs-2qm4xKC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </section>
             
                 <section class="contact-form-container">
         <form id="contactForm" action="enviar.php" method="POST">
             <h2>Contacto</h2>
-            <p>¿Tienes alguna pregunta? ¡Escríbenos!</p>
+            <p>Abierto a preguntas y consultas</p>
 
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name" required>
@@ -119,19 +156,19 @@
                 Sugerencias o Comentarios
             </label>
 
-            <p class="form-legend">Suscribirme a los boletines de:</p>
+            <p class="form-legend">Tema</p>
             
             <label class="choice-label">
                 <input type="checkbox" id="noticias" name="suscripcion" value="noticias">
-                Noticias y Actualizaciones
+                Academico
             </label>
             <label class="choice-label">
                 <input type="checkbox" id="promociones" name="suscripcion" value="promociones">
-                Ofertas y Promociones
+                Profesional
             </label>
             <label class="choice-label">
                 <input type="checkbox" id="eventos" name="suscripcion" value="eventos">
-                Invitaciones a Eventos
+                Otro
             </label>
 
             <label for="message">Mensaje:</label>
@@ -142,7 +179,8 @@
     </section>
         </main>
         <footer>
-        <section id = "referencias">
+        <!--
+            <section id = "referencias">
         <h2>Referencias</h2>
 
         <article>
@@ -167,7 +205,8 @@
             Autor, D. D. (Año). <em>Título del libro</em>. Recuperado de https://www.ejemplo.com
             </p>
         </article>
-
+        No tengo referencias por el momento
+        -->
         </section>
             <p>Angel Zambrano - 2025</p>
             <ul>

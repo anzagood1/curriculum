@@ -1,68 +1,95 @@
-* {
-  font-family: "Crimson Text", serif;
+/* --- ESTILOS GLOBALES Y PALETA DE COLORES --- */
+/*
+  background: #0f0e17
+  paragraph: #a7a9be
+  headline: #fffffe
+  button: #ff8906
+  button-text: #fffffe
+*/
+#mapa-facultad {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: auto;  /* La altura se ajusta automáticamente */
+  aspect-ratio: 4 / 3; /* Mantiene la proporción 4:3 */
+  border: 1px solid #ff8906; /* Borde opcional para que combine */
 }
-h1{
+* {
+  /* Mantenemos tu fuente por defecto para párrafos */
+  font-family: "Crimson Text", serif;
+  box-sizing: border-box; /* Mejor manejo de padding y bordes */
+}
+
+body {
+  background-color: #0f0e17; /* Color de fondo principal */
+  color: #a7a9be;          /* Color de párrafo principal */
+  margin: 0;
+  padding: 2%; /* Añadimos un poco de espacio en los bordes */
+}
+
+/* --- ENCABEZADOS Y TEXTO --- */
+h1 {
+  color: #fffffe; /* Color para titulares */
   text-align: center;
   font-weight: bold;
-
   font-family: "BBH Sans Hegarty", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 3rem; /* Hacemos el título principal más grande */
 }
 
-#photo{
-  width: 8vw;
-  height: auto;
+/* Aplicamos el color de titular a todos los subtítulos */
+h2, h3 {
+  color: #fffffe;
 }
 
-footer p{
-  text-align: right;
-  font-style: italic;
+.subtitle {
+  /* color: rgb(151 156 165 / 0.89); -> Reemplazado por el color de la paleta */
+  color: #fffffe;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ff8906; /* Línea inferior para destacar */
+  padding-bottom: 8px;
 }
 
-nav > ul{
-  list-style-type: none;
-}
-#referencias{
-  display: flex;
-  /* Permite que los elementos se muevan a la siguiente línea si no caben */
-  flex-wrap: wrap;
-  /* Define el espacio entre elementos */
-  gap: 1rem;
+a {
+  color: #ff8906; /* Usamos el color del botón para los enlaces */
+  text-decoration: none; /* Quitamos el subrayado por defecto */
 }
 
-#referencias > h2 {
-  /* Establece el ancho base del h2 al 100% del contenedor */
-  flex: 0 0 100%;
+a:hover {
+  text-decoration: underline; /* Lo mostramos solo al pasar el mouse */
 }
 
-#referencias > article {
-  /* Permite que los artículos crezcan para llenar el espacio sobrante */
-  flex: 1 1 calc(33.333% - 1rem);
+/* --- ESTRUCTURA Y SECCIONES --- */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
 }
-section{
-  border: 0.2pt solid #cedddd;
 
+#photo {
+  width: 150px; /* Tamaño fijo para mejor control */
+  height: 150px;
+  border-radius: 50%; /* Hacemos la foto circular */
+  border: 3px solid #ff8906; /* Borde con el color de acento */
+  object-fit: cover; /* Asegura que la imagen no se deforme */
+}
+
+section {
+  background-color: #161625; /* Un fondo ligeramente más claro para las secciones */
+  border: 1px solid #2a2a3c; /* Borde sutil que encaja con el tema oscuro */
+  border-radius: 8px; /* Bordes redondeados para un look más moderno */
+  
   margin-top: 4px;
   margin-left: 2px;
   margin-right: 2px;
-  margin-bottom: 8px;
-
-  padding: 1.5% 0.8%;
-
   margin-bottom: 1.2rem;
+  padding: 1.5rem; /* Un padding más consistente */
 }
 
-.subtitle{
-  color: rgb(151 156 165 / 0.89);
-  text-transform: uppercase;
-}
-
-section > form {
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 1rem;
-  column-gap: 1rem;
+/* --- NAVEGACIÓN --- */
+nav {
+  background-color: #161625;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
 }
 
 nav > ul {
@@ -71,4 +98,131 @@ nav > ul {
   flex-direction: row;
   align-items: center;
   gap: 1rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: #fffffe;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #ff8906;
+  color: #fffffe;
+  text-decoration: none;
+}
+
+/* --- FORMULARIO DE CONTACTO --- */
+.contact-form-container {
+  border-color: #ff8906; /* Destacamos la sección de contacto */
+}
+
+.contact-form-container form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  background-color: #0f0e17;
+  color: #a7a9be;
+  border: 1px solid #a7a9be;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ff8906;
+  box-shadow: 0 0 5px rgba(255, 137, 6, 0.5);
+}
+
+.submit-btn {
+  background-color: #ff8906; /* Color de fondo del botón */
+  color: #fffffe;           /* Color del texto del botón */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #e07805; /* Un naranja más oscuro para el hover */
+}
+
+/* --- FOOTER --- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid #2a2a3c;
+}
+
+footer p {
+  text-align: center; /* Centramos el texto del footer */
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* --- ESTILOS FLEX PARA REFERENCIAS (mantenidos de tu código) --- */
+#referencias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#referencias > h2 {
+  flex: 0 0 100%;
+}
+
+#referencias > article {
+  flex: 1 1 calc(33.333% - 1rem);
+}
+/* --- ESTILOS PARA LA SECCIÓN DE PROYECTOS --- */
+.proyecto {
+  margin-bottom: 2rem; /* Espacio entre cada proyecto */
+  border-left: 3px solid #ff8906; /* Línea de acento a la izquierda */
+  padding-left: 1.5rem;
+}
+
+.proyecto h3 {
+  margin-top: 0;
+  font-family: "Chivo", sans-serif; /* Una fuente ligeramente distinta para los títulos */
+}
+
+.proyecto h3 a {
+  text-decoration: none;
+}
+
+.proyecto p {
+  line-height: 1.6; /* Mejora la legibilidad del párrafo */
+}
+
+.proyecto strong {
+  color: #fffffe; /* Resalta las tecnologías mencionadas */
 }
